@@ -1,24 +1,37 @@
-d= float(input('Informe a distancia entre lajes e Natal em km/h:'))
-v = float(input('Informe a velocidade inicial do carro em km/h:'))
-a= float(input('Informe a aceleração do carro em metro por segundo ao quadrado:'))
-
-t =   (a*t**2//2) + v * t - d 
-hora_formatada = hora_atual.strftime("%H:%M:%S")
-
-print(f'A distancia percorrida é de {t}')
+import sys
 
 
+d= int(input('Informe a distancia entre lajes e Natal em km:'))
+if d <= 0:
+ sys.exit('Informe uma distancia maior que zero ')
 
 
+v = int(input('Informe a velocidade inicial do carro em km/h:'))
+if v <= 0:
+ sys.exit('Informe uma velocidade maior que zero ')
 
 
+a= int(input('Informe a aceleração do carro em metro por segundo ao quadrado:'))
+if a <= 0:
+ sys.exit('Informe uma distancia maior que zero ')
 
-from datetime import datetime
+d = d*1000 
+v = v/3.6
 
-# Obtendo a hora atual
-hora_atual = datetime.now()
+delta = v**2-4*a*d
+if d < 0:
+ sys.exit('Não é possivel calcular o tempo ')
 
-# Formatando para hh:mm:ss
-hora_formatada = hora_atual.strftime("%H:%M:%S")
+#b na raiz quadrada é a velocidade inicial
+ t= (-v + delta ** 0.5) / (2*a)
 
-print("Hora formatada:", hora_formatada)
+
+ #agora t vai ser tranformar em hora porque ta em segndo
+
+hora = t//3600
+t=t%3600
+minuto = t // 60
+segundo = t % 60
+
+print(f' tempo = {hora}:{minuto}:{segundo}')
+
