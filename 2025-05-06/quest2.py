@@ -1,37 +1,33 @@
+
+#programa para classificar um triangulo quanto aos angulos.
+#o programa devera solicitar 3 angulos interiros positivos;
+#para ser um triangulo,a soma dos angulos devera ser igua a 180;
+#retangulo: possui um angulo interno reto igual a 90.
+#obtusangulo: possui um angulo interno obtuso maior que 90
+#acutangulo: possui todos os angulos internos agudos menores que 90
+
+
 import sys
 
+#informe a nota da etapa um
+angulo1 = int(input('informe um angulo inteiro positivo:'))
+if etapa1 < 0 and etapa1 >100:
+    sys.exit('erro: angulo 1 invalida. um angulo inteiro positivo')
 
-d= int(input('Informe a distancia entre lajes e Natal em km:'))
-if d <= 0:
- sys.exit('Informe uma distancia maior que zero ')
+#informe a nota da etapa dois
+angulo2 = int(input('informe o segundo angulo inteiro positivo:'))
+if etapa2 < 0 and etapa2 >100:
+    sys.exit('erro: angulo 2 invalida. infome um angulo inteiro positivo')
 
+angulo3 = int(input('informe o terceiro angulo inteiro positivo:'))
+if etapa3 < 0 and etapa3 >100:
+    sys.exit('erro: angulo 3 invalida. infome um angulo inteiro positivo')
 
-v = int(input('Informe a velocidade inicial do carro em km/h:'))
-if v <= 0:
- sys.exit('Informe uma velocidade maior que zero ')
+angulo = int(round(angulo1+angulo2+angulo3))
 
-
-a= int(input('Informe a aceleração do carro em metro por segundo ao quadrado:'))
-if a <= 0:
- sys.exit('Informe uma distancia maior que zero ')
-
-d = d*1000 
-v = v/3.6
-
-delta = v**2-4*a*d
-if d < 0:
- sys.exit('Não é possivel calcular o tempo ')
-
-#b na raiz quadrada é a velocidade inicial
- t= (-v + delta ** 0.5) / (2*a)
-
-
- #agora t vai ser tranformar em hora porque ta em segndo
-
-hora = t//3600
-t=t%3600
-minuto = t // 60
-segundo = t % 60
-
-print(f' tempo = {hora}:{minuto}:{segundo}')
-
+if angulo == 90:
+    print('triangulo retangulo.')
+elif angulo > 20:
+    print('angulo obtusangulo.')
+elif angulo < 90:
+    print('Aluno reprovado.')
