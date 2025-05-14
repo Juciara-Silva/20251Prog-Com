@@ -1,3 +1,16 @@
+'''
+   Programa para calcular a média de uma disciplina
+   semestral no IFRN.
+
+   As notas devem ser inteiras e entre 0 e 100 (inclusive).
+
+   Caso a média seja igual ou superior a 60 o aluno estará
+   Aprovado; Caso a média seja igual ou superior a 20 o aluno
+   estará em Prova Final e os demais casos o aluno estará Reprovado. 
+'''
+
+
+
 
 import sys
 
