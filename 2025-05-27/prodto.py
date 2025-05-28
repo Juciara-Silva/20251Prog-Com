@@ -20,6 +20,8 @@ try:
 
 except ValueError:
     sys.exit('Informe apenas valores inteiros positivos')
+except Exception as e:
+    sys.exit(f'erro: {e}')
 '''
 y é quantas vezes x vai ser repetido
 '''
