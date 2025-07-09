@@ -24,6 +24,7 @@ except Exception as erro:
 else:
     
     '''readline'''
+    ''''''
     while True:
          strConteudo = arqLeitura.readline()
          if not strConteudo: break
